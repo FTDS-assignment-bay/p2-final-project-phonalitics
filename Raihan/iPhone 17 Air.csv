@@ -1,4 +1,4 @@
-sentimen,author,comment,timestamp,like_count,tipe_produk,brand,segment,release_date
+sentiment,author,comment,timestamp,like_count,tipe_produk,brand,segment,release_date
 negatif,@sousacarvalhodesign4194,Mirip dengan iklan Samsung.,2024-11-15T11:59:22Z,0,iPhone 17 Air,Apple,Mid-Range,9-Sep-25
 positif,@Adamisthecoolboy,Ini tidak nyata.,2024-11-14T17:15:39Z,0,iPhone 17 Air,Apple,Mid-Range,9-Sep-25
 positif,@LucyBackup,"Hal berikutnya, kita akan tahu bahwa kameranya akan langsung menyatu.",2024-11-13T03:07:17Z,0,iPhone 17 Air,Apple,Mid-Range,9-Sep-25
