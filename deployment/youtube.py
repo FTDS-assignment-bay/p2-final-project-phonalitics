@@ -1,6 +1,7 @@
 from helper import extract_youtube_id, get_all_comments
 import streamlit as st
 import random
+import pandas as pd
 
 st.header("💬 Youtube Comments Sentiment Analysis")
 
@@ -30,6 +31,7 @@ if st.button('Submit', type="secondary"):
     if the_youtube_id:
       with st.spinner("Please wait while we're loading the data..."):
         the_data = get_all_comments(the_youtube_id)
+        print(the_data)
         st.balloons()
         st.markdown(f"""<p style="color: green; padding: 0; margin: 0;">Total comments: {len(the_data)}</p>""", unsafe_allow_html=True)
         for data in the_data:
@@ -51,6 +53,7 @@ if st.button('Submit', type="secondary"):
           st.markdown(comment_html, unsafe_allow_html=True)
     else:
       st.write("Invalid youtube link.")
-  except:
+  except Exception as e:
+    print(e)
     st.write("Invalid youtube link.")
     
