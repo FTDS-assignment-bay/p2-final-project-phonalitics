@@ -18,6 +18,7 @@ if st.button('Submit', type="secondary"):
     if the_youtube_id:
       with st.spinner("Please wait while we're loading the data..."):
         the_data = get_all_comments(the_youtube_id)
+        st.balloons()
         st.markdown(f"""<p style="color: green; padding: 0; margin: 0;">Total comments: {len(the_data)}</p>""", unsafe_allow_html=True)
         for data in the_data:
           sentiment = random.choice(sentiments)
