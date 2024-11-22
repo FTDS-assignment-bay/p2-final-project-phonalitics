@@ -34,7 +34,6 @@ if st.button('Submit', type="secondary"):
         the_data = get_all_comments(the_youtube_id)
         data = np.random.choice(["Positive", "Neutral", "Negative"], size=len(the_data))
 
-        # Create a DataFrame
         sentiment_data = pd.DataFrame(data, columns=["Sentiment"])
         sentiment_counts = sentiment_data["Sentiment"].value_counts()
         positives = sentiment_counts.get("Positive", 0)
