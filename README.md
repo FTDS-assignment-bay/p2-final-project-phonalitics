@@ -57,6 +57,15 @@ Web scraping dalam proyek ini memiliki 2 tujuan, yaitu untuk mengumpulkan data u
 - Dalam pengumpulan data, sumber yang digunakan berasal dari YouTube sehingga _labeling_ dilakukan secara manual untuk menentukan sentimen positif, negatif, dan netral.
 - Pada sudut pandang aplikasi, pengguna akan dihadapkan oleh tampilan untuk melihat hasil sentimen analisis suatu produk _handphone_ yang dirilis pada tahun 2024 dan 2025 dan tampilan yang dapat memasukkan _link_ YouTube untuk dilakukan analisis dari sentimen yang dihasilkan produk _handphone_ sehingga dapat membantu dalam pengambilan keputusan dalam membeli suatu barang.
 
+---
+
+## phonALytics Team
+
+- [Handwitanto Abraham](https://www.linkedin.com/in/handwitanto-abraham/)
+- [Serina Roihaanah Mulawati](http://www.linkedin.com/in/serina-roihaanah-mulawati)
+- [Stanly Sukmajaya Kwok](https://www.linkedin.com/in/stanly-sukmajaya)
+- [Achmad Raihan](https://www.linkedin.com/in/achmad-raihan/)
+
 ### Modeling
 
 Modeling bertujuan untuk memproses teks berupa sentimen yang dihasilkan suatu produk, baik itu berdasarkan data yang telah dikumpulkan atau berasal dari pengguna berupa _link_ sehingga dapat mengetahui suatu produk _handphone_ mengarah ke sentimen negatif, positif, atau netral. Analisis tersebut termasuk dalam kategori _Natural Language Processing_ yang menggunakan Deep Learning berupa **Long Short-Term Memory**.
