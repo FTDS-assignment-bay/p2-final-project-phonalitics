@@ -7,10 +7,9 @@ import os
 import re
 
 def app():
-    st.header('Phone Brands Sentiment Analysis', divider='rainbow')
     data = pd.read_csv("final_dataset_text_processed.csv")
     data.dropna(inplace=True)
-    val = st.sidebar.pills("Choose Phone Word Cloud To Show", data["tipe_produk"].unique(), selection_mode="multi")
+    val = st.sidebar.pills("Choose Phone Word Cloud To Show", data["tipe_produk"].unique(), selection_mode="multi", default="Galaxy S24")
     for the_value in val:
       the_product = data[data["tipe_produk"] == the_value]
       if not the_product.empty:
@@ -26,13 +25,20 @@ def app():
             image = Image.open(f"./images/{item}")
             break
         with col1:
-          if image:
-            st.write(the_value)
-            st.image(image)
-        plt.title(f"Wordcloud for phone {the_value}")
-        plt.figure(figsize=(10, 5))
-        plt.imshow(wordcloud, interpolation='bilinear')
-        plt.axis("off")
+            if image:
+                # Add title for the image section and display the image with a border
+                st.markdown(f"### {the_value}")
+                st.image(image, caption=f"{the_value} Image")
+
         with col2:
-          st.write('<p style="visibility: hidden;">This is some text.</p>', unsafe_allow_html=True)
-          st.pyplot(plt)
+            # Add a title for the word cloud section
+            st.markdown(f"### Word Cloud for {the_value}")
+
+            # Configure the word cloud plot
+            plt.figure(figsize=(10, 5))
+            plt.imshow(wordcloud, interpolation='bilinear')
+            plt.axis("off")
+            st.pyplot(plt)
+
+            # Add some space to separate the two sections and make the layout cleaner
+            st.write('<div style="padding: 10px;"></div>', unsafe_allow_html=True)
