@@ -10,7 +10,7 @@ st.header("🔥 Phone Brands Word Clouds")
 
 data = pd.read_csv("final_dataset_text_processed.csv")
 data.dropna(inplace=True)
-val = st.sidebar.pills("Choose Phone Word Cloud To Show", data["tipe_produk"].unique(), selection_mode="multi", default="Galaxy S24")
+val = st.sidebar.pills("Choose Phone Word Clouds To Show", data["tipe_produk"].unique(), selection_mode="multi", default="Galaxy S24")
 for the_value in val:
   the_product = data[data["tipe_produk"] == the_value]
   if not the_product.empty:
