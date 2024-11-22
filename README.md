@@ -26,7 +26,7 @@
 
 ## **Introduction**
 
-Program ini dibuat untuk membantu masyarakat dalam memilih smartphone dengan memanfaatkan analisis sentimen netizen di platform YouTube. Aplikasi ini dirancang untuk menganalisis sentimen komentar menggunakan teknik NLP (Natural Language Processing) berbasis Machine Learning atau Deep Learning.
+Program ini dibuat untuk membantu masyarakat dalam memilih smartphone dengan memanfaatkan analisis sentimen netizen di platform YouTube. Aplikasi ini dirancang untuk menganalisis sentimen komentar menggunakan teknik NLP (Natural Language Processing) berbasis Deep Learning.
 
 Aplikasi ini bertujuan untuk memberikan rekomendasi berbasis data yang membantu masyarakat dalam pengambilan keputusan pembelian smartphone. Dengan adanya aplikasi ini, diharapkan pengguna dapat mengambil keputusan yang lebih informatif, efisien, dan tepat sasaran dalam memilih smartphone.
 
