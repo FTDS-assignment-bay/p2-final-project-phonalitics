@@ -16,7 +16,7 @@ def app():
         text_data = " ".join(data["text_processed"])
         wordcloud = WordCloud(width=800, height=400, background_color='white').generate(text_data)
         regex = re.compile(r"^(.*)\.[^.]+$")
-        col1, col2 = st.columns([3, 7])
+        col1, col2 = st.columns([2.5, 7.5])
         image = None
         
         for item in os.listdir("images"):
@@ -26,19 +26,15 @@ def app():
             break
         with col1:
             if image:
-                # Add title for the image section and display the image with a border
                 st.markdown(f"### {the_value}")
                 st.image(image, caption=f"{the_value} Image")
 
         with col2:
-            # Add a title for the word cloud section
             st.markdown(f"### Word Cloud for {the_value}")
 
-            # Configure the word cloud plot
             plt.figure(figsize=(10, 5))
             plt.imshow(wordcloud, interpolation='bilinear')
             plt.axis("off")
             st.pyplot(plt)
 
-            # Add some space to separate the two sections and make the layout cleaner
             st.write('<div style="padding: 10px;"></div>', unsafe_allow_html=True)

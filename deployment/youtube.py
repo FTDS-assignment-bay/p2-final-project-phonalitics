@@ -5,9 +5,9 @@ import random
 def app():
   user_input = st.text_input("Enter a youtube link for sentiment analysis")
   sentiment_colors = {
-      "Positive": "#28a745",  # Green for positive
-      "Neutral": "#ffc107",   # Yellow for neutral
-      "Negative": "#dc3545"   # Red for negative
+      "Positive": "#28a745",  
+      "Neutral": "#ffc107",   
+      "Negative": "#dc3545"   
   }
   
   if st.button('Submit', type="secondary"):
@@ -34,7 +34,6 @@ def app():
             </div>
             """
 
-            # Display the styled comment and sentiment
             st.markdown(comment_html, unsafe_allow_html=True)
       else:
         st.write("Invalid youtube link.")
