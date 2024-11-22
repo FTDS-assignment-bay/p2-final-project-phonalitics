@@ -26,16 +26,16 @@ for the_value in val:
         image = Image.open(f"./images/{item}")
         break
     with col1:
-        if image:
-            st.markdown(f"### {the_value}")
-            st.image(image, caption=f"{the_value} Image")
+      if image:
+        st.markdown(f"### {the_value}")
+        st.image(image, caption=f"{the_value} Image")
 
     with col2:
-        st.markdown(f"### Word Cloud for {the_value}")
+      st.markdown(f"### Word Cloud for {the_value}")
 
-        plt.figure(figsize=(10, 5))
-        plt.imshow(wordcloud, interpolation='bilinear')
-        plt.axis("off")
-        st.pyplot(plt)
+      plt.figure(figsize=(10, 5))
+      plt.imshow(wordcloud, interpolation='bilinear')
+      plt.axis("off")
+      st.pyplot(plt)
 
-        st.write('<div style="padding: 10px;"></div>', unsafe_allow_html=True)
+      st.write('<div style="padding: 10px;"></div>', unsafe_allow_html=True)
