@@ -3,7 +3,16 @@ import streamlit as st
 import random
 
 st.header("💬 Youtube Comments Sentiment Analysis")
-
+st.markdown("""
+    <style>
+        .stTextInput > label > div > p {
+            font-size: 23px;
+            padding: 0;
+            margin: 0;
+            font-weight: 600;
+        }
+    </style>
+""", unsafe_allow_html=True)
 user_input = st.text_input("Enter a youtube link for sentiment analysis")
 sentiment_colors = {
     "Positive": "#28a745",  
@@ -41,6 +50,4 @@ if st.button('Submit', type="secondary"):
       st.write("Invalid youtube link.")
   except:
     st.write("Invalid youtube link.")
-else:
-  st.write("Click the button to submit your link!")
     
